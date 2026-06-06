@@ -1,0 +1,178 @@
+/* Page Background */
+.form-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899
+  );
+}
+
+/* Card */
+.form {
+  width: 100%;
+  max-width: 450px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 40px;
+  border-radius: 25px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  animation: fadeIn 0.5s ease;
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.heading h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.heading p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-control {
+  width: 100%;
+  padding: 16px 20px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Extra Link */
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.auth-link a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .form {
+    padding: 30px;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .form {
+    padding: 25px;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    padding: 14px 16px;
+  }
+
+  .btn {
+    padding: 14px;
+  }
+}

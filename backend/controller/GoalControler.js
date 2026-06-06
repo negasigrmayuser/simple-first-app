@@ -6,6 +6,8 @@ import User from "../modules/usermodules.js";
 //route  get/api/goals
 // private
 //route  get/api/goals?name=shose
+
+
 export const getGoals=asyncHandler(async (req, res) => {
 
      const goals=await Goal.find({ user: req.user.id })

@@ -17,7 +17,6 @@ const goalSchema=new mongoose.Schema(
         timestamps:true,
     }
 )
-
 export default mongoose.model("Goal",goalSchema);
 
 
