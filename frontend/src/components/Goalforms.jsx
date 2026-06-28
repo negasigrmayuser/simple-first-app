@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { createGoal, reset } from '../features/goals/goalSlice'; // Assuming a goalSlice
+import { createGoal, reset } from '../features/goals/GoalSlice'; // Assuming a goalSlice
 import Spinner from './Spinner';
 import '../styles/GoalForm.css'; // Assuming a new CSS file for styling
 
