@@ -10,7 +10,7 @@ dotenv.config()
 await connectDB();
 
    // get port from env file and create express app
-const port=process.env.PORT;
+const port=process.env.PORT || 8000;
 const app=express()
   
 // middelware for json and urlencoded data

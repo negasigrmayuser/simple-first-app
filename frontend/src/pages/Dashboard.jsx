@@ -11,10 +11,10 @@ import { getGoals,reset } from '../features/goals/GoalSlice'
 const Dashboard = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-
+ 
   const { goals, isLoading,isError,message } = useSelector((state) => state.goals)
   const { user } = useSelector((state) => state.auth)
-
+  console.log(import.meta.env.VITE_API_URL);
 
 useEffect(() => {
   if (isError) {
@@ -35,6 +35,8 @@ useEffect(() => {
   if (isLoading) {
     return <Spinner />
   }
+
+  
 
   return (
     <div className='dashboard-page'>
@@ -80,5 +82,5 @@ useEffect(() => {
     </div>
   )
 }
-
 export default Dashboard
+
