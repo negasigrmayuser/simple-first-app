@@ -9,7 +9,8 @@ import User from "../modules/usermodules.js";
 
 
 export const getGoals=asyncHandler(async (req, res) => {
-
+    
+     console.log("req.user =", req.user)
      const goals=await Goal.find({ user: req.user.id })
     if(!goals){
         res.status(404).json({meg:"please add some goals"})
@@ -58,16 +59,16 @@ export const updateGoals = asyncHandler(async (req, res,next) => {
         throw new Error(`goal ${req.params.id} is not occure`)
     }
 
-    const user=await User.findById(req.user.id)
+  
 
     //check for user
-    if(!user){
+    if(!req.user){
         res.status(401)
         throw new Error("user not found")
     }
 
     //make sure the logged in user matches the goal user
-    if(goal.user.toString()!==user.id){
+    if(goal.user.toString()!==req.user.id){
         res.status(401)
         throw new Error("user not authorized")
     }
@@ -87,21 +88,19 @@ export const deleteGoals = asyncHandler(async (req, res,next) => {
         throw new Error(`goal ${req.params.id} is not occure`)
     }
 
-     const user=await User.findById(req.user.id)
+   
 
     //check for user
-    if(!user){
+    if(!req.user){
         res.status(401)
         throw new Error("user not found")
     }
 
-    //make sure the logged in user matches the goal user
-    if(goal.user.toString()!==user.id){
+    if(goal.user.toString()!==req.user.id){
         res.status(401)
         throw new Error("user not authorized")
     }
     const deletedGoal=await Goal.findByIdAndDelete(req.params.id)
-     
     res.status(200).json({message:`goal ${req.params.id} is deleted`})
 
 })

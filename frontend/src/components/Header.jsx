@@ -8,7 +8,7 @@ import '../stryles/header.css'
 
 function Header() {
   const dispatch = useDispatch();
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
     
 
@@ -22,7 +22,7 @@ function Header() {
      <div className='logo'>
          <Link to='/'>🎯 GoalSetter</Link>
       </div>
-     <ul>-
+     <ul>
       {user ? (
   <>
     <li className="welcome-user">

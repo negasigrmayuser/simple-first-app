@@ -13,6 +13,7 @@ const initialState = {
 }
 
    //Register user
+   
 export const register = createAsyncThunk('auth/register',async(user,thunkAPI)=>{
     try {
         // Call the authService.register function
