@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import '../stryles/Dashboard.css'
+import '../styles/Dashboard.css'
 import Spinner from '../components/Spinner'
 import GoalForm from '../components/Goalforms'
 import GoalItem from '../components/GoalItem'

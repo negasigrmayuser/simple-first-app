@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { login, reset } from "../features/auth/authSlice";
 import Spinner from "../components/Spinner";
 import { Link } from "react-router-dom";
-import '../stryles/login.css'
+import '../styles/Login.css'
 
 function Login() {
   const [formData, setFormData] = useState({

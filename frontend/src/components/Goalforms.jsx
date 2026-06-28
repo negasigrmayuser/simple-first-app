@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { createGoal, reset } from '../features/goals/goalSlice'; // Assuming a goalSlice
 import Spinner from './Spinner';
-import '../stryles/GoalForm.css'; // Assuming a new CSS file for styling
+import '../styles/GoalForm.css'; // Assuming a new CSS file for styling
 
 function GoalForm() {
   const [text, setText] = useState('');

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import {deleteGoal} from '../features/goals/GoalSlice'
-import '../stryles/GoalItem.css'
+import '../styles/GoalItem.css'
 function GoalItem({goal}) {
 
    const dispatch=useDispatch()

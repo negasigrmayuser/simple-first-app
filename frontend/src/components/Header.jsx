@@ -3,7 +3,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import {FaSignInAlt, FaUserPlus} from 'react-icons/fa'
 import { useSelector,useDispatch } from 'react-redux';
 import { logout,reset } from '../features/auth/authSlice';
-import '../stryles/header.css'
+import '../styles/header.css'
 
 
 function Header() {
