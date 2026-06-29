@@ -3,7 +3,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import {FaSignInAlt, FaUserPlus} from 'react-icons/fa'
 import { useSelector,useDispatch } from 'react-redux';
 import { logout,reset } from '../features/auth/authSlice';
-import '../styles/header.css'
+import '../styles/Header.css'
 
 
 function Header() {
@@ -60,5 +60,4 @@ function Header() {
     </div>
   )
 }
-
 export default Header
