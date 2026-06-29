@@ -6,12 +6,14 @@ import userRouter from "./router/userRouter.js"
 import errorhandler from "./middelware/errorhandler.js"
 import noFound from "./middelware/noFound.js"
 import colors from "colors"
+import cors from "cors";
 dotenv.config()
 await connectDB();
 
    // get port from env file and create express app
 const port=process.env.PORT || 8000;
 const app=express()
+app.use(cors());
   
 // middelware for json and urlencoded data
 app.use(express.json())
